@@ -9,12 +9,19 @@
     width: 50%;
     height: auto;
     border: 10px solid rgb(104, 155, 201);
+    border-radius: 4vw;
     text-align: center;
  }
-    .squares {
-        margin: auto;
-        text-align: center;
-        width: 90%;
-        height: auto;
-        border: 5px solid aliceblue;
-    }
+
+ .squares {
+   margin: auto;
+   text-align: center;
+   width: 90%;
+   height: auto;
+   border: 5px solid aliceblue;
+}
+
+ .Icons {
+   padding: 1vw;
+   width: 80px;
+ }

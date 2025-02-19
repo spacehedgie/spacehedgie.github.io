@@ -1,3 +1,5 @@
-function openspacehedgie1() {
-    window.open()
+console.log("Hi there")
+
+function openHedgie() {
+    window.open('/spacehedgieMain/hedgieHome.html')
 }
