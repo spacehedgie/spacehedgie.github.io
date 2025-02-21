@@ -1,16 +1,86 @@
  html {
-    font-size: 2vw;
-    color: rgb(152, 252, 252);
-    background-color: rgb(48, 46, 59);
+   font-size: 2vw;
+   color: rgb(80, 47, 32);
+   text-align: center;
+   font-family: "Courier New", Courier, monospace;
+   background-image: linear-gradient(rgba(255, 255, 255, 1), 70%, rgba(255, 255, 255, 0)), url(Index-Images/starbg.gif);
+   background-size: 5%;
+   height: 200%;
+ }
+
+ body{
+   min-height: 100%;
+ }
+
+ .abel-regular {
+   font-family: "Abel", serif;
+   font-weight: 400;
+   font-style: normal;
+ }
+ 
+   /*HEADER*/
+ header{
+   position: sticky;
+   top: 0%;
+   color: rgb(255, 215, 215);
+   font-size: clamp(1rem, 10vw, 2rem); 
+   background-color: rgb(17, 17, 17);
+ }
+ #headerMain{
+   height: clamp(1rem, 2rem, 3.5rem);
+   width: 90%;
+   margin: auto;
+ }
+.headerTris{
+   width: 0;
+   height: 0;
+   border-top-width: 3rem;
+   border-top-style: solid;
+   border-top-color: transparent;
+   border-right-width: 3rem;
+   border-right-style: solid;
+   border-right-color: rgb(17, 17, 17);
+}
+ #headerLeft{
+   float: left;
+   transform: rotate(180deg);
+ }
+ #headerRight{
+   float: right;
+   transform: rotate(270deg);
+ }
+
+ #home {
+   font-size: 1rem;
+   padding-top: 1.5%;
+   transform: scale(2);
+   line-height: 10%;
+   float: left;
+   padding-left: 3%;
+ }
+
+
+/*MAIN*/
+
+ #top-Text{
+   font-size: 4rem;
+   padding: 2.5rem;
+ }
+ #introText{
+   font-size: 40px;
+   padding-bottom: 2rem;
  }
 
  .sites {
-    margin: auto;
-    width: 50%;
-    height: auto;
-    border: 10px solid rgb(104, 155, 201);
-    border-radius: 4vw;
-    text-align: center;
+   margin: auto;
+   width: 50%;
+   height: auto;
+   padding: 1rem;
+   background-color: rgb(48, 46, 59);
+   border: 10px solid rgb(74, 110, 141);
+   color: rgb(255, 255, 255);
+   border-radius: 3rem;
+   text-align: center;
  }
 
  .squares {
@@ -23,5 +93,14 @@
 
  .Icons {
    padding: 1vw;
-   width: 80px;
+   width: clamp(1rem, calc(10vw + 1rem), 15rem);
+ }
+
+ hr {
+   border: 0;
+   clear:both;
+   display:block;
+   width: 96%;               
+   background-color:#0c0c0c;
+   height: 1px;
  }

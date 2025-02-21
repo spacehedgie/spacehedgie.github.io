@@ -2,34 +2,59 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
         <meta name="author" content="spacehedgie">
         <meta name="description" content="Hello! You will find all sorts of oddities on my site. Explore these sections I have for you!">
         <!-- <link rel="icon" WIP-->
+        <link rel="stylesheet" href="reset.css" type="text/css">
         <link rel="stylesheet" href="index.css" type="text/css">
         <title>spacehedgie's Site</title>
     </head>
     <body>
 
-        <h1>Hello world</h1>
-        <h2>Welcome to my new new site!</h2>
-        <p>There isn't much right now. I'm just testing out a few things.</p>
-        
-        <div class="sites">
-                <section class="spacehedgie squares">
-                    <img src="\Index Images\Ki.svg" class="Icons"></img>
-                    <h2 onclick="openHedgie()">section3</h2>
-                </section>
+        <header id="header">
 
-                <section class="music squares">
-                    <h2>section 2</h2>
-                </section>
+            <div id="headerMain">
+                <h1 id="home"><a href="">Home</a></h1>
+            </div>
+            
 
-                <section class="3D squares">
-                    <img src="\Index Images\Cube.svg" class="Icons"></img>
-                    <h2>section 1</h2>
-                </section>
-                <button>Hello!</button>
-        </div>
+            <div id="headerLeft">
+                <div class="headerTris"></div>
+            </div>
+            <div id="headerRight">
+                <div class="headerTris"></div>
+            </div>
+        </header>
+
+        <main>
+
+            <div>
+                <h1 class="abel-regular" id="top-Text">Welcome to my site!</h1>
+                <p class="abel-regular" id="introText">There isn't much right now. I'm just testing out a few things.</p>
+            </div>
+
+            <div class="sites">
+                    <section class="spacehedgie squares">
+                        <img src="\Index-Images\Ki.svg" class="Icons"></img>
+                        <h2 onclick="openHedgie()">section3</h2>
+                    </section>
+
+                    <section class="music squares">
+                        <h2>section 2</h2>
+                    </section>
+
+                    <section class="3D squares">
+                        <img src="\Index-Images\Cube.svg" class="Icons"></img>
+                        <h2>section 1</h2>
+                    </section>
+            </div>
+
+        </main>
+
 
         <script src="index.js"></script>
     </body>
