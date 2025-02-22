@@ -3,13 +3,11 @@
    color: rgb(80, 47, 32);
    text-align: center;
    font-family: "Courier New", Courier, monospace;
-   background-image: linear-gradient(rgba(255, 255, 255, 1), 70%, rgba(255, 255, 255, 0)), url(Index-Images/starbg.gif);
-   background-size: 5%;
-   height: 200%;
+   min-height: 100%;
  }
 
  body{
-   min-height: 100%;
+   background-image: linear-gradient(white, 85%, rgba(97, 97, 97, 0.5)), url(Index-Images/starbg.gif);
  }
 
  .abel-regular {
@@ -21,13 +19,12 @@
    /*HEADER*/
  header{
    position: sticky;
-   top: 0%;
    color: rgb(255, 215, 215);
    font-size: clamp(1rem, 10vw, 2rem); 
    background-color: rgb(17, 17, 17);
  }
  #headerMain{
-   height: clamp(1rem, 2rem, 3.5rem);
+   height: 10vh;
    width: 90%;
    margin: auto;
  }
@@ -51,8 +48,8 @@
  }
 
  #home {
-   font-size: 1rem;
-   padding-top: 1.5%;
+   font-size: 3vh;
+   padding-top: 3vh;
    transform: scale(2);
    line-height: 10%;
    float: left;
@@ -62,9 +59,12 @@
 
 /*MAIN*/
 
+ main {
+  margin: 5vw;
+ }
+
  #top-Text{
-   font-size: 4rem;
-   padding: 2.5rem;
+   font-size: calc(120px - 0.1em);
  }
  #introText{
    font-size: 40px;
@@ -73,7 +73,7 @@
 
  .sites {
    margin: auto;
-   width: 50%;
+   width: clamp(450px, 70%, 900px);
    height: auto;
    padding: 1rem;
    background-color: rgb(48, 46, 59);
@@ -93,7 +93,7 @@
 
  .Icons {
    padding: 1vw;
-   width: clamp(1rem, calc(10vw + 1rem), 15rem);
+   width: min(200px, 50%)
  }
 
  hr {
