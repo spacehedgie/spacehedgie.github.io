@@ -4,9 +4,6 @@
    text-align: center;
    font-family: "Courier New", Courier, monospace;
    min-height: 100%;
- }
-
- body{
    background-image: linear-gradient(white, 85%, rgba(97, 97, 97, 0.5)), url(Index-Images/starbg.gif);
  }
 
@@ -16,9 +13,10 @@
    font-style: normal;
  }
  
-   /*HEADER*/
+/*=========== HEADER ===========*/
  header{
    position: sticky;
+   top: 0;
    color: rgb(255, 215, 215);
    font-size: clamp(1rem, 10vw, 2rem); 
    background-color: rgb(17, 17, 17);
@@ -26,6 +24,8 @@
  #headerMain{
    height: 10vh;
    width: 90%;
+   display: flexbox;
+   justify-content: center;
    margin: auto;
  }
 .headerTris{
@@ -47,33 +47,54 @@
    transform: rotate(270deg);
  }
 
- #home {
-   font-size: 3vh;
-   padding-top: 3vh;
-   transform: scale(2);
+ #returnHome {
+   font-size: 6vh;
+   padding-top: 4.5vh;
    line-height: 10%;
    float: left;
    padding-left: 3%;
  }
+ 
+ #other {
+  height: 100%;
+  width: 60vw;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ #other p {
+  line-height: 10%;
+  font-size: 4vw;
+  font-weight: 400;
+  padding-left: 3.5vw;
+  padding-right: 3.5vw;
+ }
+ @media all and (max-width: 800px) {
+  #other{
+    display: none;
+  }
+ }
 
 
-/*MAIN*/
-
+/*=========== MAIN ===========*/
  main {
   margin: 5vw;
  }
 
  #top-Text{
-   font-size: calc(120px - 0.1em);
+   font-size: calc(120px - 1em);
+   line-height: 100%;
  }
  #introText{
    font-size: 40px;
-   padding-bottom: 2rem;
+   padding-top: 1em;
+   padding-bottom: 2em;
  }
 
  .sites {
    margin: auto;
-   width: clamp(450px, 70%, 900px);
+   width: clamp(500px, 70%, 900px);
    height: auto;
    padding: 1rem;
    background-color: rgb(48, 46, 59);
@@ -82,14 +103,23 @@
    border-radius: 3rem;
    text-align: center;
  }
+ @media all and (max-width: 800px) {
+  .sites{
+    width: 100%;
+  }
+ }
 
  .squares {
    margin: auto;
    text-align: center;
    width: 90%;
    height: auto;
+   background-color: rgba(255, 255, 255, 0.3);
    border: 5px solid aliceblue;
 }
+  .squares:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
 
  .Icons {
    padding: 1vw;
