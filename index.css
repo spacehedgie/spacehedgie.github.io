@@ -70,7 +70,7 @@
   padding-left: 3.5vw;
   padding-right: 3.5vw;
  }
- @media all and (max-width: 800px) {
+ @media all and (max-width: 550px) {
   #other{
     display: none;
   }
@@ -83,11 +83,11 @@
  }
 
  #top-Text{
-   font-size: calc(120px - 1em);
+   font-size: clamp(5vw, 120px, 20vw);
    line-height: 100%;
  }
  #introText{
-   font-size: 40px;
+   font-size: clamp(3vw, 40px, 15vw);
    padding-top: 1em;
    padding-bottom: 2em;
  }
@@ -103,7 +103,7 @@
    border-radius: 3rem;
    text-align: center;
  }
- @media all and (max-width: 800px) {
+ @media all and (max-width: 600px) {
   .sites{
     width: 100%;
   }
