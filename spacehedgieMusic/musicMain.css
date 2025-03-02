@@ -1,0 +1,31 @@
+/*=========== MAIN ===========*/
+.centerStuff{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#musicFrontPage{
+    padding: 2vw;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#siteTitle {
+    height: 18vh;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#pageDesc {
+    background: rgba(211, 46, 46, 0.575);
+    height: 78vh;
+}
+
+#descText {
+    font-size: 3vw;
+    width: 40%;
+    background: rgba(255, 255, 255, 0.5);
+}
+#descImage {
+    width: 40%;
+    background: rgba(255, 255, 255, 0.5);
+}

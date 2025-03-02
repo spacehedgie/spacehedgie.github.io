@@ -4,6 +4,9 @@ const siteSquares = document.getElementsByClassName("squares");
 function openHedgie() {
     window.open('/spacehedgieMain/hedgieHome.html')
 }
+function openMusic() {
+    window.open('/spacehedgieMusic/musicHome.html')
+}
 
 // place addEventListener to all "squares" elements (use for getElementsByClassName)
 for (var i = 0 ; i < siteSquares.length; i++) {

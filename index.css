@@ -3,7 +3,6 @@
    color: rgb(80, 47, 32);
    text-align: center;
    font-family: "Courier New", Courier, monospace;
-   min-height: 100%;
    background-image: linear-gradient(white, 85%, rgba(97, 97, 97, 0.5)), url(Index-Images/starbg.gif);
  }
 
@@ -63,9 +62,9 @@
   justify-content: center;
   align-items: center;
  }
- #other p {
+ #other a {
   line-height: 10%;
-  font-size: 4vw;
+  font-size: 2.4vw;
   font-weight: 400;
   padding-left: 3.5vw;
   padding-right: 3.5vw;
