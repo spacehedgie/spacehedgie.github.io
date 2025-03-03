@@ -1,0 +1,33 @@
+html {
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    min-height: 100%;
+    color: aliceblue;
+}
+
+.caveat-font {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.xanh-mono-regular {
+    font-family: "Xanh Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.xanh-mono-regular-italic {
+    font-family: "Xanh Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.roboto-mono-font {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+  

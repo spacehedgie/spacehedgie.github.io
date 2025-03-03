@@ -3,7 +3,7 @@
    color: rgb(80, 47, 32);
    text-align: center;
    font-family: "Courier New", Courier, monospace;
-   background-image: linear-gradient(white, 85%, rgba(97, 97, 97, 0.5)), url(Index-Images/starbg.gif);
+   background-image: linear-gradient(white, 80%, rgba(97, 97, 97, 0.1)), url(Index-Images/starbg.gif);
  }
 
  .abel-regular {
@@ -47,14 +47,19 @@
  }
 
  #returnHome {
+   cursor: pointer;
    font-size: 6vh;
    padding-top: 4.5vh;
    line-height: 10%;
    float: left;
    padding-left: 3%;
  }
+ header a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+ }
  
  #other {
+  cursor: pointer;
   height: 100%;
   width: 60vw;
   float: right;
@@ -63,13 +68,13 @@
   align-items: center;
  }
  #other a {
-  line-height: 10%;
+
   font-size: 2.4vw;
   font-weight: 400;
   padding-left: 3.5vw;
   padding-right: 3.5vw;
  }
- @media all and (max-width: 550px) {
+ @media all and (max-width: 600px) {
   #other{
     display: none;
   }
@@ -109,8 +114,10 @@
  }
 
  .squares {
+  cursor: pointer;
    margin: auto;
    text-align: center;
+   font-size: clamp(30px, 3vw, 100px);
    width: 90%;
    height: auto;
    background-color: rgba(255, 255, 255, 0.3);
@@ -119,6 +126,26 @@
   .squares:hover {
     background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   }
+  .squares:active {
+    background-color: white;
+    color: black;
+  }
+
+  .squaresUnavailable {
+    margin: auto;
+    text-align: center;
+    font-size: clamp(30px, 3vw, 100px);
+    width: 90%;
+    height: auto;
+    background-color: rgba(253, 38, 0, 0.3);
+    border: 5px solid aliceblue;
+ }
+.squaresUnavailable:hover{
+    background-image: linear-gradient(rgb(252, 65, 65), rgba(255, 0, 0, 0.4));
+}
+.squaresUnavailable:active {
+    background-color: rgb(211, 0, 0);
+}
 
  .Icons {
    padding: 1vw;
