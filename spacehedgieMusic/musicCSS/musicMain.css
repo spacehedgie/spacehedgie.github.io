@@ -29,6 +29,58 @@
         #descImage img {
             width: 80%;
         }
+
+#new_music {
+    padding: 10vw;
+}
+#album_peek{
+    flex-direction: column;
+    margin: auto;
+    background-color: black;
+    border-radius: 3rem;
+    padding: 5vw;
+}
+#music_player{
+    margin-top: 5vh;
+    width: clamp(50px, 30vw, 500px);
+    height: clamp(100px, 45vw, 1000px);
+    background-color: rgb(138, 11, 11);
+    border-radius: 3rem;
+    border: 10px, solid, rgb(255, 255, 255);
+    display: block;
+}
+    #playerTop{
+        background-color: rgb(39, 40, 65);
+        border-top-left-radius: 2.3rem;
+        border-top-right-radius: 2.3rem;
+        height: 60%;
+        flex-direction: column;
+    }
+    #playerBottom{
+        background-color: rgb(141, 110, 110);
+        border-bottom-left-radius: 2.3rem;
+        border-bottom-right-radius: 2.3rem;
+        height: 40%;
+    }
+        #playerScreen{
+            background-color: rgb(0, 0, 0);
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+            margin: 5%;
+            padding: 3%;
+            height: 100%;
+        }
+        #playerBottomContent{
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
+            padding: 5%;
+            height: 100%;
+        }
+        #album_peek p{
+            font-size: clamp(10px, 1.5vw, 50px);
+        }
+
+
 @media all and (max-width: 600px) {
     #pageDesc{
         flex-direction: column-reverse;
@@ -44,6 +96,14 @@
     #descImage img {
         width: 70%;
     }
+
+    #new_music {
+        padding: 10vw;
+    }
+    #album_peek{
+        padding: 5vw;
+    }
+    
 }
 
 footer {
