@@ -31,15 +31,38 @@
         }
 
 #new_music {
-    padding: 10vw;
+    padding: 2vw;
 }
-#album_peek{
+#music_peek{
     flex-direction: column;
     margin: auto;
     background-color: black;
     border-radius: 3rem;
     padding: 5vw;
 }
+#catsCats {
+    margin-top: 3vh;
+    width: 100%;
+    flex-direction: column;
+}
+#creaturesTitle {
+    margin: 2%;
+    width: clamp(250px, 70%, 700px);
+}
+#catsTitle {
+    width: clamp(190px, 40%, 350px);
+}
+#catSVG {
+    margin: 2%;
+    width: clamp(200px, 35%, 300px);
+}
+
+#downloadLink {
+    padding: 3%;
+    color: aliceblue;
+    font-size: clamp(15px, 4vw, 30px);
+}
+
 #music_player{
     margin-top: 5vh;
     width: clamp(50px, 30vw, 500px);
@@ -47,7 +70,8 @@
     background-color: rgb(138, 11, 11);
     border-radius: 3rem;
     border: 10px, solid, rgb(255, 255, 255);
-    display: block;
+    display: none;
+    /* display: block; */
 }
     #playerTop{
         background-color: rgb(39, 40, 65);
@@ -79,6 +103,12 @@
         #album_peek p{
             font-size: clamp(10px, 1.5vw, 50px);
         }
+    #playerControls{
+        margin-bottom: 2.5%;
+        padding: 2%;
+        background-color: aliceblue;
+        border-radius: 1rem;
+    }
 
 
 @media all and (max-width: 600px) {

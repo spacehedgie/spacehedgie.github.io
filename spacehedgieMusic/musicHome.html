@@ -43,10 +43,23 @@
             </section>
 
             <section id="new_music" class="centerStuff">
-                <div id="album_peek" class="centerStuff">
-                    <p>This is a very bare-bones mp3 player as of right now. Anyways it's here cause I'm challanging a fictional person that me and my friend saw in a game...</p>
+                <div id="music_peek" class="centerStuff">
+                    <!--<p>This is a very bare-bones mp3 player as of right now. Anyways it's here cause I'm challanging a fictional person that me and my friend saw in a game...</p>-->
+                    <p>Hey! Take a listen to one of the pieces in an upcoming collection of music I'm working on!</p>
 
-                    <div id="music_player">
+                    <div id="catsCats" class="centerStuff">
+                        <img src="imageFiles/Creatures.png" id="creaturesTitle">
+                        <p></p>
+                        <img src="imageFiles/Cats,Cats.png" id="catsTitle">
+                        <img src="imageFiles/Cats.svg" id="catSVG">
+                        
+                        <div id="playerControls">
+                            <button class="musicControls" id="playMusic" onclick="startPawsCats();">Start audio</button>
+                            <button class="musicControls" id="stopMusic" onclick="stopCats();">Stop audio</button>
+                        </div>
+                    </div>
+
+                    <div id="music_player"> <!--PLAYER IS CURRENTLY HIDDEN (CSS)-->
                         <div id="playerTop" class="centerStuff">
                             <div id="playerScreen" class="centerStuff">
                                 <div id="screenContent">
@@ -75,7 +88,11 @@
 
                     </div>
 
-                    <a href="MusicFiles/spacehedgie - Cats, Cats.mp3" download style="font-size: clamp(10px, 1.5vw, 50px); padding: 3%; color: aliceblue;">Download the song here!</a> <!--TEMPORARY DOWNLOAD LINK-->
+                    <div id="CC_License">
+                        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+                            <span property="dct:title">Cats, Cats</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://spacehedgie.github.io">spacehedgie</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a></p>
+                    </div>
+                    <a href="MusicFiles/spacehedgie - Cats, Cats.mp3" download id="downloadLink">Download the song here!</a> <!--TEMPORARY DOWNLOAD LINK-->
 
                 </div>
             </section>
@@ -85,7 +102,7 @@
             <div id="CCLicense">
 
                 <p>
-                    Hey there! Want to use my music? Feel free to do so! (Actually... there's no music here yet.)
+                    Hey there! Want to use my music? Feel free to do so!
                     <br>
                     <hr>
                     I am licensing <u>ALL</u> of my music featured on this site under CC licenses to enable you to be 

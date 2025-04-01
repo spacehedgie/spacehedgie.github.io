@@ -3,6 +3,14 @@ html {
     font-family: "Courier New", Courier, monospace;
     min-height: 100%;
     color: aliceblue;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9%;
+}
+@media all and (max-width: 600px) {
+  html {
+    scroll-padding-top: 25%;
+  }
+
 }
 
 main {
