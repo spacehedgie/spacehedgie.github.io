@@ -2,8 +2,8 @@ console.log("Hi there")
 const siteSquares = document.getElementsByClassName("squares");
 
 function openHedgie() {
-    window.open('/spacehedgieMain/hedgieHome.html')
+    window.open('/Main/Home.html')
 }
 function openMusic() {
-    window.open('/spacehedgieMusic/musicHome.html')
+    window.open('/Music/Home.html')
 }
