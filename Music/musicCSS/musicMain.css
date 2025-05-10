@@ -35,7 +35,7 @@
 .main-content {
     margin: 2%;
     padding: 2%;
-    width: clamp(250px, 70%, 1500px);
+    width: clamp(420px, 70%, 1500px);
     color: black;
     background-color: antiquewhite;
     flex-direction: row;
@@ -85,7 +85,7 @@
 .download-section {
     background-color: azure;
     padding: 2%;
-    width: clamp(250px, 70%, 1500px);
+    width: clamp(420px, 70%, 1500px);
     flex-direction: row;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .all-downloads {
-    background-color: black;
+    background-color: rgb(71, 39, 34);
     padding: 1%;
     width: 50%;
 }
@@ -161,6 +161,27 @@
     }
     #album_peek{
         padding: 5vw;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+    .main-content img {
+        margin-bottom: 2vh;
+        width: 100%;
+    }
+    .info-and-controls {
+        margin-left: 0%;
+    }
+    .info-and-controls img {
+        width: 85%;
+    }
+    .music-controls input {
+        width: 70vw;
+    }
+
+    .download-section{
+        flex-direction: column;
     }
     
 }
