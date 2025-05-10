@@ -3,21 +3,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#musicFrontPage{
-    padding: 2vw;
+    flex-direction: column;
 }
 
 #siteTitle {
+    width: 100%;
     font-size: clamp(50px, 8vw, 100px);
-    height: 18vh;
+    height: 20vh;
     background: rgba(255, 255, 255, 0.5);
-    border-radius: 3vw;
 }
 
 #pageDesc {
     height: 78vh;
+    flex-direction: row;
 }
     #descText {
         font-size: clamp(50px, 4vw, 100px);
@@ -31,19 +29,89 @@
         }
 
 #new_music {
-    padding: 2vw;
+    background-color: rgb(49, 15, 15);
 }
-#music_peek{
+
+.main-content {
+    margin: 2%;
+    padding: 2%;
+    width: clamp(250px, 70%, 1500px);
+    color: black;
+    background-color: antiquewhite;
+    flex-direction: row;
+    margin-bottom: 0%;
+}
+
+.music_player {
     flex-direction: column;
-    margin: auto;
+}
+.player-image {
+    width: 50%;
+}
+.info-and-controls {
+    margin-left: 5%;
+    justify-content: space-evenly;
+}
+.music-title {
+    width: 100%;
+    margin-bottom: 3%;
+}
+#caution {
+    margin: 5%;
+    display: block;
+    flex-direction: row;
+    font-size: 0;
+}
+#caution img {
+    width: 15%;
+    padding: 0%;
+    margin: 0%;
+}
+#caution p {
+    margin: 2%;
+    font-size: clamp(12px, 30%, 500px);
+}
+
+.music-info {
+    margin-top: 3vh;
+    font-size: clamp(12px, 30%, 500px);
+    margin-bottom: 3vh;
+}
+
+.music-controls input {
+    width: 30vw;
+}
+
+.download-section {
+    background-color: azure;
+    padding: 2%;
+    width: clamp(250px, 70%, 1500px);
+    flex-direction: row;
+}
+
+.CC_License {
     background-color: black;
+    padding: 1%;
+    width: 50%;
+    color:aliceblue;
+}
+
+.all-downloads {
+    background-color: black;
+    padding: 1%;
+    width: 50%;
+}
+.all-downloads a {
+        color: aliceblue;
+}
+
+#catsCats {
+    margin: 5%;
     border-radius: 3rem;
     padding: 5vw;
-}
-#catsCats {
+    background-color: rgb(14, 9, 9);
     margin-top: 3vh;
-    width: 100%;
-    flex-direction: column;
+    width: 80%;
 }
 #creaturesTitle {
     margin: 2%;
@@ -58,57 +126,18 @@
 }
 
 #downloadLink {
-    padding: 3%;
+    padding: 1%;
     color: aliceblue;
     font-size: clamp(15px, 4vw, 30px);
 }
 
-#music_player{
-    margin-top: 5vh;
-    width: clamp(50px, 30vw, 500px);
-    height: clamp(100px, 45vw, 1000px);
-    background-color: rgb(138, 11, 11);
-    border-radius: 3rem;
-    border: 10px, solid, rgb(255, 255, 255);
+#playerControls{
     display: none;
-    /* display: block; */
+    margin-bottom: 1.5%;
+    padding: 2%;
+    background-color: aliceblue;
+    border-radius: 1rem;
 }
-    #playerTop{
-        background-color: rgb(39, 40, 65);
-        border-top-left-radius: 2.3rem;
-        border-top-right-radius: 2.3rem;
-        height: 60%;
-        flex-direction: column;
-    }
-    #playerBottom{
-        background-color: rgb(141, 110, 110);
-        border-bottom-left-radius: 2.3rem;
-        border-bottom-right-radius: 2.3rem;
-        height: 40%;
-    }
-        #playerScreen{
-            background-color: rgb(0, 0, 0);
-            border-top-left-radius: inherit;
-            border-top-right-radius: inherit;
-            margin: 5%;
-            padding: 3%;
-            height: 100%;
-        }
-        #playerBottomContent{
-            border-bottom-left-radius: inherit;
-            border-bottom-right-radius: inherit;
-            padding: 5%;
-            height: 100%;
-        }
-        #album_peek p{
-            font-size: clamp(10px, 1.5vw, 50px);
-        }
-    #playerControls{
-        margin-bottom: 2.5%;
-        padding: 2%;
-        background-color: aliceblue;
-        border-radius: 1rem;
-    }
 
 
 @media all and (max-width: 600px) {
@@ -140,10 +169,6 @@ footer {
     height: 50vh;
     background-color: rgb(22, 2, 2);
     padding: 5vw;
-    flex-direction: column;
-}
-#CCLicense {
-    font-size: clamp(20px, 4vw, 30px);
 }
 hr {
     border: 0;

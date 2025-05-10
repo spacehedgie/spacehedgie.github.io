@@ -1,40 +1,45 @@
 console.log("Hi there!");
 
+//const catsAudio = new Audio("MusicFiles/spacehedgie - Cats, Cats.mp3");
+//const BlitzAudio = new Audio("MusicFiles/GLITCH-BLITZ.ogg");
 
-// CREATURES Cats, Cats
-const catsAudio = new Audio("MusicFiles/spacehedgie - Cats, Cats.mp3");
-const playPauseButton = document.getElementById('playMusic');
-let audioPause = 0;
+let playPause = 0;
+let previousFileLocation = " ";
+let musicFile;
+let musicSlider;
+let sliderValue = 0;
+let musicID;
+let musicTime;
+let previousMusicTime;
 
-function startPawsCats(){
-    if (audioPause == 0){
-        audioPause = 1;
-        catsAudio.play();
-        playPauseButton.innerHTML = "Pause audio";
+function startPauseAudio (musicFileLocation, id) {
+
+    musicID = id;
+    if (musicFileLocation != previousFileLocation) {
+        musicFile = new Audio(musicFileLocation);
+    }
+    console.log(musicFile);
+
+    playPause += 1;
+    if (playPause == 1){
+        musicFile.play();
+        console.log("Playing")
     } else {
-        audioPause = 0;
-        catsAudio.pause();
-        catsAudio.currentTime -= 0.1;
-        playPauseButton.innerHTML = "Resume audio";
+        musicFile.pause();
+        playPause = 0;
+        console.log("Paused")
     }
-    
-};
+    previousFileLocation = musicFileLocation;
+}
 
-function stopCats(){
-    catsAudio.pause();
-    catsAudio.currentTime = 0;
-    audioPause = 0;
-    playPauseButton.innerHTML = "Start audio";
-};
+function sliderStuff(mouseStat) {
+    musicSlider = document.getElementById("music-range-" + musicID);
+    //console.log(musicFile.currentTime);
+    musicTime = musicFile.currentTime;
+    sliderValue = musicTime;
+    musicSlider.value = musicTime; // go to music time
 
+    previousMusicTime = musicFile.currentTime
+}
 
-function checkAudioEnd(){
-    if (catsAudio.ended == true){
-        audioPause = 0;
-        playPauseButton.innerHTML = "Start audio";
-    }
-    setTimeout(checkAudioEnd, 1000);
-};
-
-checkAudioEnd();
- 
+setInterval(sliderStuff, 100);
