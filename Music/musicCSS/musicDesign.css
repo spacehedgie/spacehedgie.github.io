@@ -5,6 +5,7 @@ html {
     color: aliceblue;
     scroll-behavior: smooth;
     scroll-padding-top: 9%;
+    overflow-x: hidden;
 }
 @media all and (max-width: 600px) {
   html {

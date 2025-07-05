@@ -1,2 +1,2 @@
-This is just my site.
+Hey there!
 https://spacehedgie.github.io
