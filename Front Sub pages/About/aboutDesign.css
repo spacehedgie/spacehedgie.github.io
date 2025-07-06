@@ -1,0 +1,27 @@
+/*=========== MAIN ===========*/
+.centerStuff{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+ 
+ html {
+    color: aliceblue;
+ }
+
+ /*=========== HEADER ===========*/
+ header{
+   position: sticky;
+   top: 0;
+   color: rgb(255, 215, 215);
+   font-size: clamp(1rem, 10vw, 2rem); 
+   background-color: rgb(17, 17, 17);
+ }
+ #headerMain{
+   height: 10vh;
+   width: 90%;
+   display: flexbox;
+   justify-content: center;
+   margin: auto;
+ }

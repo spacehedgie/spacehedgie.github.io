@@ -1,30 +1,32 @@
 console.log("Hi there!");
 
-//const catsAudio = new Audio("MusicFiles/spacehedgie - Cats, Cats.mp3");
-//const BlitzAudio = new Audio("MusicFiles/GLITCH-BLITZ.ogg");
-
+// =============== [MUSIC PLAYER] ===============
 let playPause = 0;
 let previousFileLocation = " ";
 let musicFile;
 let musicSlider;
 let sliderValue = 0;
 let musicID;
-let musicTime;
-let previousMusicTime;
+let movingSlider = false;
 
-function startPauseAudio (musicFileLocation, id) {
+function startPauseAudio(musicFileLocation, id) {
 
     musicID = id;
     if (musicFileLocation != previousFileLocation) {
+        try {
+            musicFile.pause(); // Stop current audio file
+            playPause = 0;
+        } catch {  
+        }
         musicFile = new Audio(musicFileLocation);
-    }
+    }                       //Check if audio file is the same to prevent loading it again.
     console.log(musicFile);
 
     playPause += 1;
-    if (playPause == 1){
+    if (playPause == 1){    // Play audio
         musicFile.play();
         console.log("Playing")
-    } else {
+    } else {                //Pause Audio
         musicFile.pause();
         playPause = 0;
         console.log("Paused")
@@ -32,14 +34,43 @@ function startPauseAudio (musicFileLocation, id) {
     previousFileLocation = musicFileLocation;
 }
 
-function sliderStuff(mouseStat) {
+function sliderStuff() {
     musicSlider = document.getElementById("music-range-" + musicID);
-    //console.log(musicFile.currentTime);
-    musicTime = musicFile.currentTime;
-    sliderValue = musicTime;
-    musicSlider.value = musicTime; // go to music time
 
-    previousMusicTime = musicFile.currentTime
+    //NEW CODE (actually works with mobile + less variables and stuff)
+    try {
+        musicSlider.addEventListener('input', () => {
+            musicFile.currentTime = musicSlider.value;
+            musicFile.volume = 0;
+        });
+
+        musicSlider.addEventListener('mouseup', () => {
+            musicFile.volume = 1;
+        });
+        musicSlider.addEventListener('pointerup', () => {
+            musicFile.volume = 1;
+        });
+        musicSlider.value = musicFile.currentTime;
+    } catch {
+    } // just to prevent a buttload of errors from the empty "musicSlider" from appearing 😭😭
 }
 
-setInterval(sliderStuff, 100);
+setInterval("sliderStuff()", 1);
+
+// =============== [ON VIEW ANIMATION] =============== (help from https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/)
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('NewMTitle-anim');
+        }
+    });
+});
+
+observer.observe(document.querySelector('#NewMusic_Title'))
+
+// =============== [Download] =============== (Taken from https://stackoverflow.com/questions/3916191/download-data-url-file)
+function downloadFile(dataurl) {
+    let link = document.createElement("a");
+    link.href = dataurl;
+    link.click();
+}
