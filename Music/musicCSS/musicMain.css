@@ -71,14 +71,21 @@
         50% {transform: rotate(3deg);}
         100% {transform: rotate(-3deg);}
     }
+    #Front-Right h1 {
+        font-size: clamp(25px, 1.5vw, 100px);
+    }
+    #Front-Right li {
+        font-size: clamp(15px, 1.2vw, 70px);
+    }
 
 /*=========== [NEW MUSIC] ===========*/
-#new_music {
-    background-image: linear-gradient(rgb(22, 83, 69), 50%, rgb(61, 9, 53));
+#New_music {
+    /*background-image: linear-gradient(rgb(22, 83, 69), 50%, rgb(61, 9, 53));*/
+    background-image: linear-gradient(rgb(228, 127, 33), 50%, rgb(247, 138, 14));
 }
 
 #NewMusic_Title {
-    color: rgb(37, 4, 44);
+    color: rgb(24, 13, 21);;
     margin-top: 6vh;
     font-size: clamp(50px, 8vw, 100px);
     height: 20vh;
@@ -92,51 +99,111 @@
         100% {transform: rotate(-3deg) translate(0%, -15vh);}
     }
     @media (prefers-reduced-motion: no-preference) {
-        .NewM-Title-animation {
+        .NewMTitle-anim {
             animation: NewM-Title 1.5s 1;
         }
     }
+
+#Lets-Go{
+    flex-direction: row;
+}
+
+#Lets-Go-Title{
+    width: clamp(350px, 80%, 700px);
+    margin-top: -7vh;
+    transform: rotate(5deg);
+}
+
+#Lets-Go-Info {
+    width: 40%;
+    font-size: clamp(20px, 1.3vw, 100px);
+    margin: 1%;
+}
 
 /*=========== [MUSIC PLAYER (NEW)] ===========*/
 .music_player {
     color: #f8f1f1;
     margin: 1%;
-    width: clamp(340px, 40vw, 1000px);
+    width: clamp(340px, 50vw, 1000px);
 }
     .Upper_content {
+        width: 100%;
         flex-direction: row;
-        background-color: rgb(37, 4, 44);
+        background-color: rgb(24, 13, 21);
         justify-content: space-around;
+        padding: 2%;
     }
-        .Name_credit{
-            font-size: clamp(25px, 1.2vw, 100px);
+        .music-info-and-ctrls{
+            margin: 2%;
         }
-        .Cover_art {
-            width: 50%;
-        }
-        .Player_music_title {
-            width: 80%
-        }
-        .music_ctrls {
-            flex-direction: column;
-            justify-content: space-around;
+            .Name-credit_and-other{
+                font-size: clamp(25px, 1.2vw, 100px);
+            }
+            .Cover_art {
+                width: 50%;
+            }
+            .Player_music_title {
+                width: 80%
+            }
+            .music_ctrls {
+                flex-direction: column;
+                justify-content: space-around;
 
+            }
+                .music_ctrls input {
+                    appearance: none;
+                    align-self: flex-start;
+                    width: 150%;
+                    margin-bottom: 10px;
+                    transform: translateX(-20%);
+                }
+                .music_ctrls input::-webkit-slider-runnable-track{
+                    -webkit-appearance: none;
+                    width: 150%;
+                    height: 10px;
+                    background-color: rgb(164, 164, 189);
+                }
+                .music_ctrls input::-webkit-slider-thumb{
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 20px;
+                    height: 20px;
+                    background-color: rgb(185, 18, 157);
+                    border-radius: 5px;
+                    transform: translateY(-25%);
+                }
+                
+                .music_ctrls img {
+                    width: 40%;
+                }
+
+    .Lower_content{
+        width: 100%;
+        padding: 2%;
+        background-color: rgb(21, 31, 46);
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+        .Lower_content u{
+            font-size: clamp(40px, 2vw, 100px);
+            user-select: none;
+            -webkit-user-select: none;
         }
-            .music_ctrls input {
-                width: 200%;
-                align-self: flex-start;
-                transform: translateX(-25%);
-            }
-            .music_ctrls img {
-                width: 40%;
-            }
+        .Lower_content:hover {
+            background-color: rgb(90, 110, 141);
+        }
+        .Lower_content:active {
+            background-color: rgb(71, 20, 44);
+            color: #f8f1f1;
+        }
 
 
 /*=========== [MEDIA SIZE] ===========*/
-@media all and (max-width: 800px) {
+@media all and (max-width: 900px) {
 
     #musicFrontPage{
         flex-direction: column;
+        height: auto;
     }
         @keyframes Title-in {
             0% {transform: rotate(3deg) translateX(-100%);}
@@ -144,6 +211,7 @@
         }
     #Front-Right {
         width: 75%;
+        height: fit-content;
     }
     #siteTitle{
         margin-top: 5vh;
@@ -152,6 +220,10 @@
         margin-left: 0%;
         margin-right: 0%;
     }
+        #siteTitle p {
+            margin-left: 0%;
+            margin-right: 0%;
+        }
     #pageDesc{
         flex-direction: column-reverse;
         transform: translateX(0%);
@@ -164,6 +236,14 @@
         padding: 10vw;
     }
 
+    #Lets-Go{
+        flex-direction: column;
+    }
+
+    #Lets-Go-Info {
+        width: 85vw;
+    }
+
     .Upper_content {
         flex-direction: column;
     }
@@ -171,7 +251,7 @@
             width: 100%;
             margin-bottom: 2vh;
         }
-
+}
 footer {
     height: 50vh;
     background-color: rgb(22, 2, 2);

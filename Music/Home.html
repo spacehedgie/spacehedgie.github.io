@@ -40,15 +40,24 @@
                     </section>
                 </section>
 
-                <section id="Front-Right">
-                    <h1>UPDATES</h1>
+                <section id="Front-Right" class="montserrat-font">
+                    <h1 class="bebas-neue-regular">UPDATES</h1>
                     <hr>
                     <ul>
                         <li>- Music page overhaul</li>
-                        <li>- New (and actually functioning) basic music player (RAAAAAAAHHHHHH)</li>
-                        <li>- New sections</li>
-                        <li>- ANIMATIONS!!!!</li>
+                        <li>- New (and actually functioning) basic music player (RAAAAAAAHHHHHH❗❗❗❗❗❗)</li>
+                        <li>- Animations!</li>
                         <li>- Looks legitimately better </li>
+                    </ul>
+                    <br><br>
+                    <h1 class="bebas-neue-regular">Next Steps!</h1>
+                    <hr>
+                    <ul>
+                        <li>- Better mobile support</li>
+                        <li>- More sections</li>
+                        <li>- Refined visuals and animations</li>
+                        <li>- Animation toggle</li>
+                        <li>- MORE MUSIC!!!</li>
                     </ul>
 
                 </section>
@@ -57,7 +66,7 @@
 
             </section>
 
-            <section id="new_music" class="centerStuff">
+            <section id="New_music" class="centerStuff">
 
                 <div id="NewMusic_Title" class="centerStuff montserrat-font animate">
                     <p>
@@ -66,34 +75,65 @@
 
                 </div>
 
-                <section class="music_player centerStuff montserrat-font" id="Lets_Go">
+                <div class="centerStuff" id="New_music_main_content">
 
-                    <div class="Upper_content centerStuff">
-                        <img src="imageFiles/Music Player/Let's Go!/Let's Go!_Cover.svg" class="Cover_art">
+                    <img src="imageFiles/Music Player/Let's Go!/Lets_Go_Title.webp" id="Lets-Go-Title">
 
-                        <div class="music-info-and-ctrls centerStuff">
-                            <div>
-                                <p class="Name_credit">spacehedgie - </p>
-                                <img src="imageFiles/Music Player/Let's Go!/Lets_Go_Title.webp" class="Player_music_title">
-                            </div>
+                    <div class="centerStuff" id="Lets-Go">
 
-                            <div>
-                                <br><hr>
-                                    <p></p>
-                                <hr><br>
-                            </div>
-
-                            <div class="music_ctrls">
-                                <input type="range" min="0" max="188" id="music-range-letsGo" value="0" onmousedown="sliderStuff()">
+                        <section class="centerStuff montserrat-font" id="Lets-Go-Info">
+                            <p>
+                                Heyo!
                                 <br>
-                                <button onclick="startPauseAudio('MusicFiles/Lets Go!.mp3', 'letsGo')"><img src="imageFiles/Music Player/Play_Pause.svg"></button>
+                                This is the 3rd attempt (and 2nd serious try) at some rock music. Take a listen!
+                                <hr>
+                                <u>▷ [Let's Go!]</u>
+                                <br>
+                                Call me a Splatoon-addict, but yes this piece was semi-inspired by Splatoon 3 music... Anyways, last time I took an unused melody, but this time I started completely from scratch. Hopefully you enjoy!
+                                <hr>
+                                <u>▷ [Let's Go!]</u>
+                                <br>
+                                <p class="montserrat-font-italic">1, 2, 3, GO!</p> is where's I'll be dumping a lot (but not all) of my single releases. 
+                                Stay tuned for a new <p class="montserrat-font-italic">1, 2, 3, GO!</p> section on this website!
+                                <hr><hr>
+                                You can find more information <a href="https://scratch.mit.edu/projects/1192641427/">[over here!]</a>
+                            </p>
+                        </section>
+
+                        <section class="music_player centerStuff montserrat-font" id="Lets_Go">
+
+                            <div class="Upper_content centerStuff">
+                                <img src="imageFiles/Music Player/Let's Go!/Let's Go!_Cover.svg" class="Cover_art">
+
+                                <div class="music-info-and-ctrls centerStuff">
+                                    <div>
+                                        <p class="Name-credit_and-other">spacehedgie - </p>
+                                        <img src="imageFiles/Music Player/Let's Go!/Lets_Go_Title.webp" class="Player_music_title">
+                                        <br>
+                                        <p class="Name-credit_and-other">from &#34;1, 2, 3, GO!&#34;</p>
+                                    </div>
+
+                                    <div>
+                                        <br><hr>
+                                            <a href="https://creativecommons.org">Let's Go!</a> © 2025 by <a href="https://creativecommons.org">spacehedgie</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                        <hr><br>
+                                    </div>
+
+                                    <div class="music_ctrls">
+                                        <input type="range" min="0" max="188" id="music-range-letsGo" value="0" onmousedown="sliderStuff()" ontouchstart="sliderStuff()">
+                                        <br>
+                                        <button onclick="startPauseAudio('MusicFiles/Lets Go!.mp3', 'letsGo')"><img src="imageFiles/Music Player/Play_Pause.svg"></button>
+                                    </div>
+                                    
+                                </div>
                             </div>
-                            
-                        </div>
+
+                            <div class="Lower_content centerStuff bebas-neue-regular" onclick="downloadFile('Downloads/Lets Go!.zip')">
+                                <u>Download the song (and some art) here!</u>
+                            </div>
+                        </section>
                     </div>
-
-                </section>
-
+                </div>
             </section>
 
         </main>

@@ -16,8 +16,7 @@ function startPauseAudio(musicFileLocation, id) {
         try {
             musicFile.pause(); // Stop current audio file
             playPause = 0;
-        } catch {
-            
+        } catch {  
         }
         musicFile = new Audio(musicFileLocation);
     }                       //Check if audio file is the same to prevent loading it again.
@@ -62,9 +61,16 @@ setInterval("sliderStuff()", 1);
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('NewM-Title-animation');
+            entry.target.classList.add('NewMTitle-anim');
         }
     });
 });
 
 observer.observe(document.querySelector('#NewMusic_Title'))
+
+// =============== [Download] =============== (Taken from https://stackoverflow.com/questions/3916191/download-data-url-file)
+function downloadFile(dataurl) {
+    let link = document.createElement("a");
+    link.href = dataurl;
+    link.click();
+}

@@ -6,12 +6,20 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 9%;
     overflow-x: hidden;
+    font: inherit;
 }
-@media all and (max-width: 600px) {
+@media all and (max-width: 900px) {
   html {
     scroll-padding-top: 25%;
   }
+}
 
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: rgb(255, 219, 171);
 }
 
 main {
@@ -24,12 +32,12 @@ main {
     font-style: normal;
   }
 
-  .playwrite-it-moderna-font {
-    font-family: "Playwrite IT Moderna", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
+.playwrite-it-moderna-font {
+  font-family: "Playwrite IT Moderna", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .montserrat-font {
     font-family: "Montserrat", sans-serif;
@@ -37,3 +45,10 @@ main {
     font-weight: 400;
     font-style: normal;
   }
+
+.montserrat-font-italic {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
