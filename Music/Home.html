@@ -48,6 +48,8 @@
                         <li>- New (and actually functioning) basic music player (RAAAAAAAHHHHHH❗❗❗❗❗❗)</li>
                         <li>- Animations!</li>
                         <li>- Looks legitimately better </li>
+                        <br>
+                        <li>- [RECENT] Multiple mini music player support, AND looping!</li>
                     </ul>
                     <br><br>
                     <h1 class="bebas-neue-regular">Next Steps!</h1>
@@ -100,7 +102,7 @@
                             </p>
                         </section>
 
-                        <section class="music_player centerStuff montserrat-font" id="Lets_Go">
+                        <section class="music_player centerStuff montserrat-font">
 
                             <div class="Upper_content centerStuff">
                                 <img src="imageFiles/Music Player/Let's Go!/Let's Go!_Cover.svg" class="Cover_art">
@@ -112,6 +114,13 @@
                                         <br>
                                         <p class="Name-credit_and-other">from &#34;1, 2, 3, GO!&#34;</p>
                                     </div>
+                                    
+                                    <div class="music_ctrls">
+                                        <input type="range" min="0" max="188" id="music-range-Lets_go" class="music_slider" value="0">
+                                        <br>
+                                        <button class="playerButton" id="Lets_go" data-audfileloc="MusicFiles/Lets Go!.mp3"><img src="imageFiles/Music Player/Play_Pause.svg"></button>
+                                        <button class="playerLoop" onclick="enableLoop()" id="loop-Lets_go"><p class="centerStuff">Loop</p></button>
+                                    </div>
 
                                     <div>
                                         <br><hr>
@@ -119,12 +128,6 @@
                                         <hr><br>
                                     </div>
 
-                                    <div class="music_ctrls">
-                                        <input type="range" min="0" max="188" id="music-range-letsGo" value="0" onmousedown="sliderStuff()" ontouchstart="sliderStuff()">
-                                        <br>
-                                        <button onclick="startPauseAudio('MusicFiles/Lets Go!.mp3', 'letsGo')"><img src="imageFiles/Music Player/Play_Pause.svg"></button>
-                                    </div>
-                                    
                                 </div>
                             </div>
 
@@ -134,6 +137,46 @@
                         </section>
                     </div>
                 </div>
+            </section>
+
+            <section class="centerStuff" id="3m-pt"> <!--3m-pt is multiple mini music player test-->
+
+                <p class="montserrat-font" id="pt-Title">FINALLY. Multiple Mini Music Player Support!</p>
+                <p class="montserrat-font" id="pt-desc">so yeah... I can add more than 1 mini music player on the same page without much issue!</p>
+
+                <section class="music_player centerStuff montserrat-font" id="GLITCH-BLITZ">
+
+                    <div class="Upper_content centerStuff">
+                        <img src="imageFiles/GLITCH-BLITZ_Cover.svg" class="Cover_art">
+
+                        <div class="music-info-and-ctrls centerStuff">
+                            <div>
+                                <p class="Name-credit_and-other">spacehedgie - </p>
+                                <img src="imageFiles/glitchblitz.svg" class="Player_music_title">
+                                <br>
+                            </div>
+                            
+                            <div class="music_ctrls">
+                                <input type="range" min="0" max="140" id="music-range-Glitch" class="music_slider" value="0">
+                                <br>
+                                <button class="playerButton" id="Glitch" data-audfileloc="MusicFiles/GLITCH-BLITZ.ogg"><img src="imageFiles/Music Player/Play_Pause.svg"></button>
+                                <button class="playerLoop" onclick="enableLoop()" id="loop-Glitch"><p class="centerStuff">Loop</p></button>
+                            </div>
+
+                            <div>
+                                <br><hr>
+                                    <a href="https://creativecommons.org">GLITCH-BLITZ</a> © 2025 by <a href="https://creativecommons.org">spacehedgie</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+                                <hr><br>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="Lower_content centerStuff bebas-neue-regular" onclick="downloadFile('Downloads/GLITCH-BLITZ.zip')">
+                        <u>Download the song (and some art) here!</u>
+                    </div>
+                </section>
+
             </section>
 
         </main>

@@ -1,61 +1,148 @@
 console.log("Hi there!");
 
 // =============== [MUSIC PLAYER] ===============
-let playPause = 0;
 let previousFileLocation = " ";
+let musicFileLocation;
 let musicFile;
+let currentSlider;
 let musicSlider;
-let sliderValue = 0;
+let draggedSlider;
 let musicID;
-let movingSlider = false;
+let loopToggle = 0;
+let loopButton;
+let loopButtonID;
 
-function startPauseAudio(musicFileLocation, id) {
+// -------- Initialize and Pause/Unpause Audio --------
+buttons = document.querySelectorAll('.playerButton');
 
-    musicID = id;
+buttons.forEach(musicPlayerButton => {
+    musicPlayerButton.addEventListener('click', startPauseAudio);
+});
+
+function startPauseAudio() {
+
+    musicFileLocation = this.dataset.audfileloc;
+    musicID = this.id;
+    console.log(musicID);
+
     if (musicFileLocation != previousFileLocation) {
         try {
+            previousFileLocation = musicFileLocation;
             musicFile.pause(); // Stop current audio file
             playPause = 0;
-        } catch {  
-        }
+        } catch { }
         musicFile = new Audio(musicFileLocation);
-    }                       //Check if audio file is the same to prevent loading it again.
-    console.log(musicFile);
+        currentSlider = ("music-range-" + musicID);
+        loopButtonID = ("loop-" + musicID);
+        loopToggle = 0;
+        
+        musicSlider = document.getElementById(currentSlider);
+        sliderStuff(musicSlider.id);
 
-    playPause += 1;
-    if (playPause == 1){    // Play audio
+        console.log(currentSlider);
+    }                       //Check if audio file is the same to prevent loading it again.
+
+    if (musicFile.paused) {
         musicFile.play();
-        console.log("Playing")
-    } else {                //Pause Audio
+        //console.log("Playing")
+    } else if (!musicFile.pause == false) {
         musicFile.pause();
-        playPause = 0;
-        console.log("Paused")
+        //console.log("Paused");
     }
-    previousFileLocation = musicFileLocation;
 }
 
-function sliderStuff() {
-    musicSlider = document.getElementById("music-range-" + musicID);
+// -------- Slider --------
 
-    //NEW CODE (actually works with mobile + less variables and stuff)
+sliders = document.querySelectorAll('.music_slider');
+
+sliders.forEach(musicPlayerSlider => {
+    musicPlayerSlider.addEventListener('mousedown', () => {
+        sliderStuff(event.target.id);
+    });
+    musicPlayerSlider.addEventListener('touchstart', () => {
+        sliderStuff(event.target.id);
+    });
+});
+
+function sliderStuff(testVar) {
+
     try {
         musicSlider.addEventListener('input', () => {
-            musicFile.currentTime = musicSlider.value;
-            musicFile.volume = 0;
+
+            if (currentSlider == event.target.id) { // check if current slider playing matches the one that is being dragged
+                musicFile.currentTime = musicSlider.value;
+                musicFile.volume = 0;
+                console.log("Passed through");
+            } else {
+                //console.log("Different slider detected!");
+                musicSlider = document.getElementById(currentSlider);
+            }
         });
 
         musicSlider.addEventListener('mouseup', () => {
-            musicFile.volume = 1;
+            if (currentSlider == event.target.id) {
+                musicFile.volume = 1;
+                musicSlider = document.getElementById(currentSlider);
+            }
         });
         musicSlider.addEventListener('pointerup', () => {
-            musicFile.volume = 1;
+            if (currentSlider == event.target.id) {
+                musicFile.volume = 1;
+                musicSlider = document.getElementById(currentSlider);
+            }
         });
-        musicSlider.value = musicFile.currentTime;
-    } catch {
-    } // just to prevent a buttload of errors from the empty "musicSlider" from appearing 😭😭
+
+
+        setInterval(() => {
+            if (currentSlider == musicSlider.id) {
+                musicSlider.value = musicFile.currentTime;
+            }
+        }, 1);
+
+    } catch { }
+    
 }
 
-setInterval("sliderStuff()", 1);
+setInterval('sliderStuff()', 10);
+
+// -------- Looping Audio --------
+function enableLoop () {
+    
+    loopButton = document.getElementById("loop-" + musicID);
+
+    if (loopButtonID == loopButton.id) {
+        loopToggle += 1;
+        if (loopToggle > 1 || loopToggle < 0) {
+            loopToggle = 0;
+            console.log("Loop disabled");
+        } else {
+            console.log("Loop enabled");
+        }
+    }
+}
+
+function checkLoop () {
+    try {
+        if (loopButtonID == loopButton.id) {
+            if (loopToggle == 1) {
+                loopButton.style.backgroundColor = 'rgb(55, 158, 77)';
+
+                if (musicSlider.value == musicSlider.max) {
+                    musicFile.currentTime = 0;
+                    playPause = 1;
+                    musicFile.play();
+                }
+            }
+        }
+    } catch { }
+
+    try {
+        if (loopToggle == 0) {
+            loopButton.style.backgroundColor = 'lightgrey';
+        }
+    } catch { }
+}
+setInterval("checkLoop()", 1);
 
 // =============== [ON VIEW ANIMATION] =============== (help from https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/)
 const observer = new IntersectionObserver(entries => {

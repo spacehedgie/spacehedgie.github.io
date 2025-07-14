@@ -148,18 +148,20 @@
             .music_ctrls {
                 flex-direction: column;
                 justify-content: space-around;
+                margin: 1.5%;
+                margin-top: 5%;
 
             }
                 .music_ctrls input {
                     appearance: none;
                     align-self: flex-start;
-                    width: 150%;
+                    width: 155%;
                     margin-bottom: 10px;
                     transform: translateX(-20%);
                 }
                 .music_ctrls input::-webkit-slider-runnable-track{
                     -webkit-appearance: none;
-                    width: 150%;
+                    width: 155%;
                     height: 10px;
                     background-color: rgb(164, 164, 189);
                 }
@@ -174,7 +176,14 @@
                 }
                 
                 .music_ctrls img {
-                    width: 40%;
+                    width: 40%
+                }
+                .playerButton img {
+                    margin-top: 5%;
+                }
+                .playerLoop p {
+                    margin-top: 15%;
+                    transform: translateY(-20%);
                 }
 
     .Lower_content{
@@ -196,6 +205,20 @@
             background-color: rgb(71, 20, 44);
             color: #f8f1f1;
         }
+
+/*=========== [3m-pt (multiple mini music player test)] ===========*/
+
+#3m-pt {
+    margin: 10%;
+}
+    #pt-Title {
+        margin: 4%;
+        font-size: clamp(50px, 4.5vw, 100px);
+    }
+    #pt-desc {
+        margin: 2%;
+        font-size: clamp(25px, 1vw, 60px);
+    }
 
 
 /*=========== [MEDIA SIZE] ===========*/
