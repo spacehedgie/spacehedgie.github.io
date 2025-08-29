@@ -1,64 +1,64 @@
- html {
-   font-size: 2vw;
-   color: rgb(80, 47, 32);
-   text-align: center;
-   font-family: "Courier New", Courier, monospace;
-   background-image: linear-gradient(white, 80%, rgba(97, 97, 97, 0.1)), url(Index-Images/starbg.gif);
- }
-
- .abel-regular {
-   font-family: "Abel", serif;
-   font-weight: 400;
-   font-style: normal;
- }
- 
-/*=========== HEADER ===========*/
- header{
-   position: sticky;
-   top: 0;
-   color: rgb(255, 215, 215);
-   font-size: clamp(1rem, 10vw, 2rem); 
-   background-color: rgb(17, 17, 17);
- }
- #headerMain{
-   height: 10vh;
-   width: 90%;
-   display: flexbox;
-   justify-content: center;
-   margin: auto;
- }
-.headerTris{
-   width: 0;
-   height: 0;
-   border-top-width: 3rem;
-   border-top-style: solid;
-   border-top-color: transparent;
-   border-right-width: 3rem;
-   border-right-style: solid;
-   border-right-color: rgb(17, 17, 17);
+html {
+  font-size: 2vw;
+  color: rgb(80, 47, 32);
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  background-image: linear-gradient(white, 80%, rgba(97, 97, 97, 0.1)), url(Index-Images/starbg.gif);
 }
- #headerLeft{
-   float: left;
-   transform: rotate(180deg);
- }
- #headerRight{
-   float: right;
-   transform: rotate(270deg);
- }
 
- #returnHome {
-   cursor: pointer;
-   font-size: 6vh;
-   padding-top: 4.5vh;
-   line-height: 10%;
-   float: left;
-   padding-left: 3%;
- }
- header a:hover {
+.abel-regular {
+  font-family: "Abel", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*=========== HEADER ===========*/
+header{
+  position: sticky;
+  top: 0;
+  color: rgb(255, 215, 215);
+  font-size: clamp(1rem, 10vw, 2rem); 
+  background-color: rgb(17, 17, 17);
+}
+#headerMain{
+  height: 10vh;
+  width: 90%;
+  display: flexbox;
+  justify-content: center;
+  margin: auto;
+}
+.headerTris{
+  width: 0;
+  height: 0;
+  border-top-width: 3rem;
+  border-top-style: solid;
+  border-top-color: transparent;
+  border-right-width: 3rem;
+  border-right-style: solid;
+  border-right-color: rgb(17, 17, 17);
+}
+#headerLeft{
+  float: left;
+  transform: rotate(180deg);
+}
+#headerRight{
+  float: right;
+  transform: rotate(270deg);
+}
+
+#returnHome {
+  cursor: pointer;
+  font-size: 6vh;
+  padding-top: 4.5vh;
+  line-height: 10%;
+  float: left;
+  padding-left: 3%;
+}
+header a:hover {
   background-color: rgba(255, 255, 255, 0.5);
- }
- 
- #other {
+}
+
+#other {
   cursor: pointer;
   height: 100%;
   width: 60vw;
@@ -66,98 +66,109 @@
   display: flex;
   justify-content: center;
   align-items: center;
- }
- #other a {
-
+}
+#other a {
   font-size: 2.4vw;
   font-weight: 400;
   padding-left: 3.5vw;
   padding-right: 3.5vw;
- }
- @media all and (max-width: 600px) {
+}
+@media all and (max-width: 600px) {
   #other{
     display: none;
   }
- }
+}
 
 
 /*=========== MAIN ===========*/
- main {
-  margin: 5vw;
- }
+main {
+margin: 5vw;
+}
 
- #top-Text{
-   font-size: clamp(5vw, 120px, 20vw);
-   line-height: 100%;
- }
- #introText{
-   font-size: clamp(3vw, 40px, 15vw);
-   padding-top: 1em;
-   padding-bottom: 2em;
- }
+#top-Text{
+  font-size: clamp(5vw, 120px, 20vw);
+  line-height: 100%;
+}
+#introText{
+  font-size: clamp(3vw, 40px, 15vw);
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
 
- .sites {
-   margin: auto;
-   width: clamp(500px, 70%, 900px);
-   height: auto;
-   padding: 1rem;
-   background-color: rgb(48, 46, 59);
-   border: 10px solid rgb(74, 110, 141);
-   color: rgb(255, 255, 255);
-   border-radius: 3rem;
-   text-align: center;
- }
- @media all and (max-width: 600px) {
+.sites {
+  margin: auto;
+  width: clamp(500px, 70%, 900px);
+  height: auto;
+  padding: 1rem;
+  background-color: rgb(48, 46, 59);
+  border: 10px solid rgb(74, 110, 141);
+  color: rgb(255, 255, 255);
+  border-radius: 3rem;
+  text-align: center;
+}
+@media all and (max-width: 600px) {
   .sites{
     width: 100%;
   }
- }
-
- .squares {
-  cursor: pointer;
-   margin: auto;
-   text-align: center;
-   font-size: clamp(30px, 3vw, 100px);
-   width: 90%;
-   height: auto;
-   background-color: rgba(255, 255, 255, 0.3);
-   border: 5px solid aliceblue;
 }
-  .squares:hover {
-    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-  }
-  .squares:active {
-    background-color: white;
-    color: black;
-  }
 
-  .squaresUnavailable {
-    margin: auto;
-    text-align: center;
-    font-size: clamp(30px, 3vw, 100px);
-    width: 90%;
-    height: auto;
-    background-color: rgba(253, 38, 0, 0.3);
-    border: 5px solid aliceblue;
- }
+.squares {
+  cursor: pointer;
+  margin: auto;
+  text-align: center;
+  font-size: clamp(30px, 3vw, 100px);
+  width: 90%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 5px solid aliceblue;
+}
+.squares:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+.squares:active {
+  background-color: white;
+  color: black;
+}
+
+.squaresUnavailable {
+  margin: auto;
+  text-align: center;
+  font-size: clamp(30px, 3vw, 100px);
+  width: 90%;
+  height: auto;
+  background-color: rgba(253, 38, 0, 0.3);
+  border: 5px solid aliceblue;
+}
 .squaresUnavailable:hover{
-    background-image: linear-gradient(rgb(252, 65, 65), rgba(255, 0, 0, 0.4));
+  background-image: linear-gradient(rgb(252, 65, 65), rgba(255, 0, 0, 0.4));
 }
 .squaresUnavailable:active {
-    background-color: rgb(211, 0, 0);
+  background-color: rgb(211, 0, 0);
 }
 
- .Icons {
-   padding: 1vw;
-   width: min(200px, 50%)
- }
+.Icons {
+  padding: 1vw;
+  width: min(200px, 50%)
+}
 
- hr {
-   border: 0;
-   clear:both;
-   display:block;
-   width: 96%;               
-   background-color:#0c0c0c;
-   height: 1px;
- }
- 
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#0c0c0c;
+  height: 1px;
+}
+
+.transitionAnim {
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  background-color: rgb(248, 229, 229);
+  transform-origin: bottom;
+  animation: coverScreen 1s cubic-bezier(.17,.61,.16,1);
+}
+@keyframes coverScreen {
+  0% {height: 0vh;}
+  100% {height: 100vh;}
+}

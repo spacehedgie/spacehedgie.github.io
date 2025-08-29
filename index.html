@@ -16,6 +16,8 @@
     </head>
     <body>
 
+        <div id="coverAnim"></div>
+
         <header id="header">
 
             <div id="headerMain">
@@ -25,13 +27,6 @@
                     <a href="/Front Sub pages/About/about.html">About [WIP]</a>
                     <a href="https://medium.com/@spacehedgie" target="_blank">Blog</a>
                     <a href>Placeholder</a>
-                    <!--
-                    <button>Dropdown</button>
-                    <div id="oContentDrop">
-                        <a href>About</a>
-                        <a href>Blog</a>
-                        <a href>Placeholder</a>
-                    </div>-->
                 </div>
             </div>
             
@@ -52,12 +47,12 @@
             </div>
 
             <div class="sites"> 
-                    <section class="squares"  onclick="openHedgie()" >
+                    <section class="squares"  onclick="coverScreen(openHedgie)" >
                         <img src="\Index-Images\Ki.svg" class="Icons"></img>
                         <h2>spacehedgie (WIP)</h2>
                     </section>
 
-                    <section class="squares" onclick="openMusic()">
+                    <section class="squares" onclick="coverScreen(openMusic)">
                         <img src="\Index-Images\Music.png" class="Icons"></img>
                         <h2>spacehedgie Music (WIP)</h2>
                     </section>
