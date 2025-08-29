@@ -7,7 +7,11 @@ function coverScreen(callback) {
     docCover.classList.add('transitionAnim');
     docCover.addEventListener('animationend', () => {
         callback();
+        setTimeout(() => {
+            docCover.classList.remove('transitionAnim');
+        }, 500);
     });
+    docCover.removeEventListener('animationend');
 }
 
 function openHedgie() {
